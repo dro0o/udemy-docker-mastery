@@ -14,4 +14,4 @@ My other DevOps and Docker resources are at https://www.bretfisher.com/docker
 
 Feel free to create issues or PRs if you find a problem with examples in this repo!
 
-[Remote](https://hub.docker.com/u/dro0o)
+[Docker Hub Profile](https://hub.docker.com/u/dro0o)
