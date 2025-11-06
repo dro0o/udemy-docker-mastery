@@ -1,4 +1,5 @@
 #!/bin/sh
+# Import to make sure script fails if any line fails, good for docker entry scripts
 set -e
 
 # seed the mounted volume with the default images from /app/data-default if it's empty
