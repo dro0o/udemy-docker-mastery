@@ -1,0 +1,10 @@
+- local docker cannot use secrets, only swarm can
+- stacks can use secrets, but only with version 3.1, NOT 3.0
+
+- create psql user 'secret'
+docker secret create psql_user psql_user.txt
+- create psql password 'secret', use a different method as this isn't very secure (puts password in shell  history)
+echo "myDBpassWORD" | docker secret create psql_pass -
+
+- leverage 'secrets'
+docker service create --name psql --secret psql_user --secret psql_pass -e POSTGRES_PASSWORD_FILE=/run/secrets/psql_pass -e POSTGRES_USER_FILE=/run/secrets/psql_user postgres
